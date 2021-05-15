@@ -6,10 +6,10 @@
 # Load Modules
 
 # Customizable style sheets and parameters for matplotlib
-from matplotlib import style
-style.use('fivethirtyeight')
-# Plot generator for bar, pie, line, scatter, box and other plots
-import matplotlib.pyplot as plt
+# from matplotlib import style
+# style.use('fivethirtyeight')
+# # Plot generator for bar, pie, line, scatter, box and other plots
+# import matplotlib.pyplot as plt
 # High-level math and basic algebra computing tool
 import numpy as np
 # Dataframe generator that prints out various types of datasets
@@ -53,13 +53,14 @@ app = Flask(__name__)
 # Identify All Possible Flask App Routes
 @app.route("/")
 def main():
-
-        f"Available Routes:<br/>"
+    # Intro
+    intro =    (f"Available Routes:<br/>"
         f"/api/v1.0/precipitation<br/>"
         f"/api/v1.0/stations<br/>"
         f"/api/v1.0/tobs<br/>"
         f"/api/v1.0/<start><br/>"
-        f"/api/v1.0/<start>/<end>"
+        f"/api/v1.0/<start>/<end>")
+    return (intro)
     
 
 @app.route("/api/v1.0/precipitation")
@@ -155,9 +156,9 @@ def start(start):
     return_list = []
     date_dict = {'start_date': start, 'end_date': latest_dataset_date}
     return_list.append(date_dict)
-    return_list.append({'Observation': 'TMIN', 'Temperature': temps[0][0]})
-    return_list.append({'Observation': 'TAVG', 'Temperature': temps[0][1]})
-    return_list.append({'Observation': 'TMAX', 'Temperature': temps[0][2]})
+    return_list.append({'Observation': 'TMIN', 'Temperature': temp_stats[0][0]})
+    return_list.append({'Observation': 'TAVG', 'Temperature': temp_stats[0][1]})
+    return_list.append({'Observation': 'TMAX', 'Temperature': temp_stats[0][2]})
 
     return jsonify(return_list)
 
@@ -182,12 +183,12 @@ def start_end(start, end):
     return_list = []
     date_dict = {'start_date': last_year, 'end_date': latest_dataset_date}
     return_list.append(date_dict)
-    return_list.append({'Observation': 'TMIN', 'Temperature': temps[0][0]})
-    return_list.append({'Observation': 'TAVG', 'Temperature': temps[0][1]})
-    return_list.append({'Observation': 'TMAX', 'Temperature': temps[0][2]})
+    return_list.append({'Observation': 'TMIN', 'Temperature': temp_stats[0][0]})
+    return_list.append({'Observation': 'TAVG', 'Temperature': temp_stats[0][1]})
+    return_list.append({'Observation': 'TMAX', 'Temperature': temp_stats[0][2]})
 
     return jsonify(return_list)
 
 #code to actually run
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()
