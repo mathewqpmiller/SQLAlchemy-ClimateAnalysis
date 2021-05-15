@@ -60,7 +60,7 @@ def main():
         f"/api/v1.0/tobs<br/>"
         f"/api/v1.0/<start><br/>"
         f"/api/v1.0/<start>/<end>"
-    )
+    
 
 @app.route("/api/v1.0/precipitation")
 def precipitation():
