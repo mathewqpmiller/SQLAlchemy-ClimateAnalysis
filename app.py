@@ -89,25 +89,28 @@ def precipitation():
 
 @app.route("/api/v1.0/stations")
 def stations():
+    raw_stations = session.query(Station.station).all()
+    all_stations = list(np.ravel(raw_stations))
+    return jsonify(stations=all_stations)
 
-    print("Received station api request.")
+    # print("Received station api request.")
 
-    # Define variable that calculates the total number weather stations in the dataset
-    total_weather_stations = session.query(Measurement.station).distinct().count()
+    # # Define variable that calculates the total number weather stations in the dataset
+    # total_weather_stations = session.query(Measurement.station).distinct().count()
 
-    # Create the stations list of dictionaries
-    stations_list = []
-    for station in total_weather_stations:
-        station_dict = {}
-        station_dict["id"] = station.id
-        station_dict["station"] = station.station
-        station_dict["name"] = station.name
-        station_dict["latitude"] = station.latitude
-        station_dict["longitude"] = station.longitude
-        station_dict["elevation"] = station.elevation
-        stations_list.append(station_dict)
+    # # Create the stations list of dictionaries
+    # stations_list = []
+    # for station in total_weather_stations:
+    #     station_dict = {}
+    #     station_dict["id"] = station.id
+    #     station_dict["station"] = station.station
+    #     station_dict["name"] = station.name
+    #     station_dict["latitude"] = station.latitude
+    #     station_dict["longitude"] = station.longitude
+    #     station_dict["elevation"] = station.elevation
+    #     stations_list.append(station_dict)
 
-    return jsonify(stations_list)
+    # return jsonify(stations_list)
 
 @app.route("/api/v1.0/tobs")
 def tobs():
