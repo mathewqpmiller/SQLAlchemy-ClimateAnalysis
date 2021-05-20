@@ -44,7 +44,7 @@ Similar to the precipitation analysis, I now had to answer multiple specific que
 * Use func.min, .max, .avg and .count to calculate the lowest, highest, and average temperature of the most active station
 
 <p align="center">
-    <img width="600" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+    <img width="600" alt="level1" src="https://github.com/mathewqpmiller/SQLAlchemy-ClimateAnalysis/blob/main/Resources/Images/Task3aCapture.JPG?raw=true">
 </p>
 
 * Query the last 12 months of temperature observation data
@@ -53,7 +53,7 @@ Similar to the precipitation analysis, I now had to answer multiple specific que
 * Plot the results as a histogram with twelve bins
 
 <p align="center">
-    <img width="600" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+    <img width="600" alt="level1" src="https://github.com/mathewqpmiller/SQLAlchemy-ClimateAnalysis/blob/main/Resources/Images/Task3bCapture.JPG?raw=true">
 </p>
 
 ### Task 4 - Create Climate App
@@ -69,13 +69,13 @@ With the initial Measurements and Stations analysis completed, I now had to desi
 * Create a for loop that calculates the TMIN, TAVG, and TMAX for dates between the start and end date inclusive
 
 <p align="center">
-    <img width="600" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+    <img width="600" alt="level1" src="https://github.com/mathewqpmiller/SQLAlchemy-ClimateAnalysis/blob/main/Resources/Images/Task4aCapture.JPG?raw=true">
 </p>
 
-* Precipitation returned jsonified results
+* Precipitation jsonified returned results
 
 <p align="center">
-    <img width="600" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+    <img width="600" alt="level1" src="https://github.com/mathewqpmiller/SQLAlchemy-ClimateAnalysis/blob/main/Resources/Images/Task4bCapture.JPG?raw=true">
 </p>
 
 #
