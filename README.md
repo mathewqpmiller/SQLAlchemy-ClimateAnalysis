@@ -1,30 +1,42 @@
 # SQLAlchemy: Precipitation and Climate Analysis
 
-## SqlAlchemy Database Exploration
+## SQLAlchemy Database Exploration
+For this project I was required to do a climate analysis on a popular vacation destination. I had to analyze a .sqlite database of recorded temperature observations and plan a vacation time accordingly. Using Pythons object oriented database library SQLAlchemy, I performed the analysis and explored the data in the suplied climate database. Along with SQLAlchemy, all analysis was completed using ORM queries, Pandas, and Matplotlib.
 
-To begin, use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
+# Task 1: Connect to Database
+To begin this project I first needed to create a Jupyter Notebook and establish a connection to the database. This notebook would be the same notebook that Precipitation Analysis and Stations Analysis would be completed in. The steps that I followed to connect to the database are as follows. 
+* Create a Jupyter Notebook, load module libraries and define database location
+* Use SQLAlchemy create_engine to connect to the sqlite database
+* Use SQLAlchemy automap_base() variable to reflect tables and identify classes called Station and Measurement
+* Identify database column names
+* Identify database format
+* Link Python to the database by creating an SQLAlchemy session
 
-* Use the provided starter notebook and hawaii.sqlite files to complete your climate analysis and data exploration.
-* Use SQLAlchemy create_engine to connect to your sqlite database.
-* Use SQLAlchemy automap_base() to reflect your tables into classes and save a reference to those classes called Station and Measurement.
-* Link Python to the database by creating an SQLAlchemy session.
-* Important Don't forget to close out your session at the end of your notebook.
+<p align="center">
+    <img width="700" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+</p>
 
+### Task 2: Conduct Precipitation Analysis
+Now that I was connected to the database via SQLAlchemy, I could begin to conduct my precipitation analysis. In order to do this I had to perform multiple specific queries within the Measurement class. In order to achieve this I used the datetime, pandas, matplotlib and alchemy libraries. The steps that I took to conduct the precipitation analysis are as follows.
+* Find the most recent date in the data set
+* Use most recent date and retrieve previous 12 months of precipitation data through query
+* Select only the date and prcp values
+* Load results into a Pandas DataFrame and set index to date column
+* Sort DataFrame by date
+* Print the summary statistics for the precipitation data
 
-### Task 1: Precipitation Analysis
+<p align="center">
+    <img width="700" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+</p>
 
-* Start by finding the most recent date in the data set.
-* Using this date, retrieve the last 12 months of precipitation data by querying the 12 preceding months of data.
-* Select only the date and prcp values.
-* Load the query results into a Pandas DataFrame and set the index to the date column.
-* Sort the DataFrame values by date.
-* Plot the results using the DataFrame plot method.
-* Use Pandas to print the summary statistics for the precipitation data.
+* Plot the results using the DataFrame plot method
 
+<p align="center">
+    <img width="700" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+</p>
 
-
-### Task 2: Station Analysis
-
+### Task 3: Conduct Stations Analysis
+Similar
 
 * Design a query to calculate the total number of stations in the dataset.
 * Design a query to find the most active stations (i.e. which stations have the most rows?).
@@ -40,8 +52,11 @@ Hint: You will need to use a function such as func.min, func.max, func.avg, and 
 * Plot the results as a histogram with bins=12.
 * Close out your session.
 
+<p align="center">
+    <img width="700" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+</p>
 
-Step 2 - Climate App
+### Task 4 - Create Climate App
 Now that you have completed your initial analysis, design a Flask API based on the queries that you have just developed.
 
 * Use Flask to create your routes.
@@ -82,5 +97,11 @@ You will need to join the station and measurement tables for some of the queries
 
 Use Flask jsonify to convert your API data into a valid JSON response object.
 
-
-University of Oregon: Data Analytics Boot Camp repository for homework assignment number 8.
+#
+#
+<p align="center">
+UNIVERSITY OF OREGON: Data Analytics Boot Camp - Repository for project 8(SQLAlchemy Challenge)
+</p>
+<p align="center">
+Mathew Miller © 2021. All Rights Reserved.
+</p>
