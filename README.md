@@ -3,7 +3,7 @@
 ## SQLAlchemy Database Exploration
 For this project I was required to do a climate analysis on a popular vacation destination. I had to analyze a .sqlite database of recorded temperature observations and plan a vacation time accordingly. Using Pythons object oriented database library SQLAlchemy, I performed the analysis and explored the data in the suplied climate database. Along with SQLAlchemy, all analysis was completed using ORM queries, Pandas, and Matplotlib.
 
-# Task 1: Connect to Database
+### Task 1: Connect to Database
 To begin this project I first needed to create a Jupyter Notebook and establish a connection to the database. This notebook would be the same notebook that Precipitation Analysis and Stations Analysis would be completed in. The steps that I followed to connect to the database are as follows. 
 * Create a Jupyter Notebook, load module libraries and define database location
 * Use SQLAlchemy create_engine to connect to the sqlite database
@@ -13,7 +13,7 @@ To begin this project I first needed to create a Jupyter Notebook and establish 
 * Link Python to the database by creating an SQLAlchemy session
 
 <p align="center">
-    <img width="700" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+    <img width="350" alt="level1" src="https://github.com/mathewqpmiller/SQLAlchemy-ClimateAnalysis/blob/main/Resources/Images/Task1Capture.JPG?raw=true">
 </p>
 
 ### Task 2: Conduct Precipitation Analysis
@@ -26,13 +26,13 @@ Now that I was connected to the database via SQLAlchemy, I could begin to conduc
 * Print the summary statistics for the precipitation data
 
 <p align="center">
-    <img width="700" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+    <img width="350" alt="level1" src="https://github.com/mathewqpmiller/SQLAlchemy-ClimateAnalysis/blob/main/Resources/Images/Task2aCapture.JPG?raw=true">
 </p>
 
 * Plot the results using the DataFrame plot method
 
 <p align="center">
-    <img width="700" alt="level1" src="https://github.com/mathewqpmiller/Tableau-CitBikeAnalysis/blob/main/Resources/Images/AggregateData2.JPG?raw=true">
+    <img width="500" alt="level1" src="https://github.com/mathewqpmiller/SQLAlchemy-ClimateAnalysis/blob/main/Resources/Images/Task2bCapture.JPG?raw=true">
 </p>
 
 ### Task 3: Conduct Stations Analysis
